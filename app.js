@@ -10,10 +10,7 @@ let clickUpgrade = {
     price: 10,
     quantity: 0,
     multiplier: 1
-  }
-}
-
-let autoUpgrade = {
+  },
   upGrade2: {
     price: 300,
     quantity: 0,
@@ -24,6 +21,9 @@ let autoUpgrade = {
     quantity: 0,
     multiplier: 6
   },
+}
+
+let autoUpgrade = {
   upGrade4: {
     price: 1000,
     quantity: 0,
@@ -34,21 +34,30 @@ let autoUpgrade = {
 
 // purchase upGrades
 function buyupGrade1() {
-  if (mainResource > clickUpgrade.upGrade1.price) {
+  if (mainResource >= clickUpgrade.upGrade1.price) {
     mainResource -= clickUpgrade.upGrade1.price
     clickMod++
+    clickUpgrade.upGrade1.quantity++
+    clickUpgrade.upGrade1.price *= 2
   }
-  drawResources()
+  drawupGrade1()
+  updateScreen()
 }
+
 function buyupGrade2() {
-  if (mainResource > clickUpgrade.upGrade1.price) {
-    mainResource -= clickUpgrade.upGrade1.price
+  if (mainResource > clickUpgrade.upGrade2.price) {
+    mainResource -= clickUpgrade.upGrade2.price
     clickMod += 3
   }
   drawResources()
 }
 
-
+function buyupGrade3() {
+  if (mainResource > clickUpgrade.upGrade3.price) {
+    mainResource -= clickUpgrade.upGrade3.price
+    clickMod += 6
+  }
+}
 
 
 // Get Resources Functions
@@ -66,6 +75,8 @@ function drawResources() {
 }
 
 function drawupGrade1() {
+  document.getElementById("upGrade1-q").innerHTML = clickUpgrade.upGrade1.quantity.toString()
+  document.getElementById("upGrade1-p").innerHTML = clickUpgrade.upGrade1.quantity.toString()
 
 }
 function drawupGrade2() {
