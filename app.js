@@ -1,7 +1,7 @@
 // Global Variables
 let mainResource = 0
 let clickMod = 1;
-let autoMod = 0;
+let autoMod = 5;
 
 
 // Upgrades
@@ -66,6 +66,9 @@ function buyupGrade3() {
   updateScreen()
 }
 
+function buyupGrade4() {
+
+}
 
 // Get Resources Functions
 
@@ -105,4 +108,10 @@ function updateScreen() {
   drawupGrade3()
 }
 
-updateScreen()
+setInterval{
+  () => {
+    mainResource += autoMod
+
+
+
+    updateScreen()
