@@ -108,10 +108,10 @@ function updateScreen() {
   drawupGrade3()
 }
 
-setInterval{
-  () => {
-    mainResource += autoMod
+setInterval(() => {
+  mainResource += autoMod
+}, 3000);
 
 
 
-    updateScreen()
+updateScreen()
