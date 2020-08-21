@@ -12,12 +12,12 @@ let clickUpgrade = {
     multiplier: 1
   },
   upGrade2: {
-    price: 300,
+    price: 30,
     quantity: 0,
     multiplier: 3
   },
   upGrade3: {
-    price: 600,
+    price: 60,
     quantity: 0,
     multiplier: 6
   },
@@ -25,7 +25,7 @@ let clickUpgrade = {
 
 let autoUpgrade = {
   upGrade4: {
-    price: 1000,
+    price: 100,
     quantity: 0,
     multiplier: 10
   }
@@ -45,18 +45,25 @@ function buyupGrade1() {
 }
 
 function buyupGrade2() {
-  if (mainResource > clickUpgrade.upGrade2.price) {
+  if (mainResource >= clickUpgrade.upGrade2.price) {
     mainResource -= clickUpgrade.upGrade2.price
     clickMod += 3
+    clickUpgrade.upGrade2.quantity++
+    clickUpgrade.upGrade2.price *= 2
   }
-  drawResources()
+  drawupGrade2()
+  updateScreen()
 }
 
 function buyupGrade3() {
-  if (mainResource > clickUpgrade.upGrade3.price) {
+  if (mainResource >= clickUpgrade.upGrade3.price) {
     mainResource -= clickUpgrade.upGrade3.price
     clickMod += 6
+    clickUpgrade.upGrade3.quantity++
+    clickUpgrade.upGrade3.price *= 2
   }
+  drawupGrade3()
+  updateScreen()
 }
 
 
@@ -76,14 +83,16 @@ function drawResources() {
 
 function drawupGrade1() {
   document.getElementById("upGrade1-q").innerHTML = clickUpgrade.upGrade1.quantity.toString()
-  document.getElementById("upGrade1-p").innerHTML = clickUpgrade.upGrade1.quantity.toString()
+  document.getElementById("upGrade1-p").innerHTML = clickUpgrade.upGrade1.price.toString()
 
 }
 function drawupGrade2() {
-
+  document.getElementById("upGrade2-q").innerHTML = clickUpgrade.upGrade2.quantity.toString()
+  document.getElementById("upGrade2-p").innerHTML = clickUpgrade.upGrade2.price.toString()
 }
 function drawupGrade3() {
-
+  document.getElementById("upGrade3-q").innerHTML = clickUpgrade.upGrade3.quantity.toString()
+  document.getElementById("upGrade3-p").innerHTML = clickUpgrade.upGrade3.price.toString()
 }
 function drawupGrade4() {
 
@@ -91,6 +100,9 @@ function drawupGrade4() {
 
 function updateScreen() {
   drawResources()
+  drawupGrade1()
+  drawupGrade2()
+  drawupGrade3()
 }
 
 updateScreen()
