@@ -1,7 +1,7 @@
 // Global Variables
 let mainResource = 0
 let clickMod = 1;
-let autoMod = 5;
+let autoMod = 1;
 
 
 // Upgrades
@@ -74,8 +74,11 @@ function buyupGrade4() {
       drawResources()
     }, 3000);
   }
+  autoMod +=10
   autoUpgrade.upGrade4.quantity++
   autoUpgrade.upGrade4.price *= 3
+  drawupGrade4()
+  updateScreen()
 }
 
 // Get Resources Functions
