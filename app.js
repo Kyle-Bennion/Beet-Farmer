@@ -76,7 +76,7 @@ function buyupGrade4() {
     setInterval(() => {
       mainResource += autoMod
       drawResources()
-    }, 3000);
+    }, 5000);
   }
   drawupGrade4()
   updateScreen()
