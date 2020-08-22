@@ -1,18 +1,20 @@
-*{
+* {
   outline: 1px solid red
 }
 
-
-
-body { 
-  min-height: 100vh; display: flex; flex-direction: column; 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url(rowsbackground.jpg);
+  background-size: cover;
+  background-position: center;
 }
-header{ 
 
-} 
-main{
+header {}
+
+main {
   flex-grow: 1;
-} 
-footer{ 
-
 }
+
+footer {}
