@@ -67,7 +67,15 @@ function buyupGrade3() {
 }
 
 function buyupGrade4() {
+  if (mainResource >= autoUpgrade.upGrade4.price) {
 
+    setInterval(() => {
+      mainResource += autoMod
+      drawResources()
+    }, 3000);
+  }
+  autoUpgrade.upGrade4.quantity++
+  autoUpgrade.upGrade4.price *= 3
 }
 
 // Get Resources Functions
@@ -98,7 +106,8 @@ function drawupGrade3() {
   document.getElementById("upGrade3-p").innerHTML = clickUpgrade.upGrade3.price.toString()
 }
 function drawupGrade4() {
-
+  document.getElementById("upGrade4-q").innerHTML = autoUpgrade.upGrade4.quantity.toString()
+  document.getElementById("upGrade4-p").innerHTML = autoUpgrade.upGrade4.price.toString()
 }
 
 function updateScreen() {
@@ -106,11 +115,9 @@ function updateScreen() {
   drawupGrade1()
   drawupGrade2()
   drawupGrade3()
+  drawupGrade4()
 }
 
-setInterval(() => {
-  mainResource += autoMod
-}, 3000);
 
 
 
