@@ -69,14 +69,14 @@ function buyupGrade3() {
 function buyupGrade4() {
   if (mainResource > autoUpgrade.upGrade4.price) {
     mainResource -= autoUpgrade.upGrade4.price
-    autoMod +=10
+    autoMod +=8
     autoUpgrade.upGrade4.quantity++
     autoUpgrade.upGrade4.price *= 3
 
     setInterval(() => {
       mainResource += autoMod
       drawResources()
-    }, 5000);
+    }, 3000);
   }
   drawupGrade4()
   updateScreen()
