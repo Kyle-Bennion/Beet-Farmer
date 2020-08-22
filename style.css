@@ -6,16 +6,37 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-image: url(pbimg3.jpg);
-  background-size: cover;
+  background-image: url(sf3banner4.png);
+  background-size: contain;
   background-position: center;
 }
+
+.card{
+  background-color: rgba(245, 245, 245, 0.25);
+}
+
+.btn-dark-green{
+  background-color: #879875;
+}
+
+.text-banner{
+  color: rgb(10, 0, 0);
+  text-shadow: black;
+}
+
 
 .beetimg{
 cursor: pointer;
 height: 200px;
 width: 200px;
 }
+
+.background-banner{
+  background-image: url(woodbanner.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
 
 header {}
 
