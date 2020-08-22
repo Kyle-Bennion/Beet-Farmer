@@ -27,14 +27,14 @@
       </div>
     </section>
 
-    <section class="row col-12 my-2">
-      <div class="card col-12 justify-content-center" style="width: 18rem;">
-        <div class="card-body">
+    <section class="row my-2">
+      <div class="card col-6 justify-content-center" style="width: 18rem;">
+        <div class="card-body col-6">
           <h5 class="card-title text-center">Resources</h5>
         </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Main Resource : <span id="mainResource">0</span></li>
-          <li class="list-group-item"> Hoe +1 onClick $<span id="upGrade1-p">10</span> #: <span id="upGrade1-q">--</span>
+        <ul class="list-group list-group-flush col-6">
+          <li class="list-group-item">Beet's <img src="lilbeet.png" height="20px" width="20px" alt=""> : <span id="mainResource">0</span></li>
+          <li class="list-group-item"> Hoe <img src="lilhoe.png" height="20px" width="20px" alt=""> +1 onClick $<span id="upGrade1-p">10</span> #: <span id="upGrade1-q">--</span>
           </li>
           <li class="list-group-item"> Bushell +3 onClick $<span id="upGrade2-p">30</span> #: <span id="upGrade2-q">--</span>
           </li>
@@ -43,11 +43,11 @@
           <li class="list-group-item"> Tractor +10 5secs $<span id="upGrade4-p">100</span> #: <span id="upGrade4-q">--</span>
           </li>
         </ul>
-        <div class="card-body">
-          <a href="#" class="btn btn-dark" onclick="buyupGrade1()">Buy Hoe</a>
-          <a href="#" class="btn btn-dark" onclick="buyupGrade2()">Buy Bushell</a>
-          <a href="#" class="btn btn-dark" onclick="buyupGrade3()">Buy Mose  </a>
-          <a href="#" class="btn btn-dark" onclick="buyupGrade4()">Buy Tractor</a>
+        <div class="card-body col-12">
+          <a href="#" class="btn btn-success" onclick="buyupGrade1()">Buy Hoe</a>
+          <a href="#" class="btn btn-success" onclick="buyupGrade2()">Buy Bushell</a>
+          <a href="#" class="btn btn-success" onclick="buyupGrade3()">Buy Mose  </a>
+          <a href="#" class="btn btn-success" onclick="buyupGrade4()">Buy Tractor</a>
         </div>
       </div>
     </section>
@@ -55,7 +55,9 @@
   </main>
   <!-- Footer -->
   <footer class="container-fluid">
-<h5 class="text-light bg-dark text-center">Made With Love By Revo</h5>
+    <div class="row">
+      <h5 class="text-light bg-dark text-center col-12">Made With Love By Revo</h5>
+    </div>
   </footer>
   <script src="app.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
