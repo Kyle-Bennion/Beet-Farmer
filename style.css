@@ -15,6 +15,14 @@ body {
   background-color: rgba(245, 245, 245, 0.25);
 }
 
+.main-banner-font{
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.resource-font{
+font-family: 'Shadows Into Light', cursive;
+}
+
 .btn-dark-green{
   background-color: #879875;
 }
